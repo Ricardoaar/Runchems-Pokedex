@@ -11,10 +11,10 @@ const URL = `https://pokeapi.co/api/v2/pokemon?limit=${cant}`
    
         for(let i = 0; i < cant; i++){
             const name = data.results[i].name
-            let image;
+            let image =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${i+1}.png` ;
             
 
-          
+          /*
             if(i < 9){
                 image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00${i+1}.png`
             }else if(i < 99){
@@ -23,7 +23,7 @@ const URL = `https://pokeapi.co/api/v2/pokemon?limit=${cant}`
             else{
                 image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${i+1}.png`
             }
-             
+             */
             
             htmlContent += 
             `
