@@ -8,8 +8,24 @@ body{
     align-items: center;
     font-family: 'Poppins', sans-serif;
 }
+.app {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0px;
+
+}
+.cant {
+    font-weight: bold;
+    font-size: 20px;
+}
+.all-types {
+    display: flex;
+}
  .num{
-     color: rgba(255, 255, 255, 0.267);
+     color: rgba(255, 255, 255, 0.658);
      font-weight: bold;
      font-size: 1.5em;
      position:absolute;
@@ -17,6 +33,13 @@ body{
      margin-left: 210px;
      
  }
+ .types-esp {
+     background-color: rgba(240, 248, 255, 0.171);
+     border-radius: 10px;
+     padding: 0 8px;
+     margin: 0 5px;
+ }
+ 
  .stat {
      display: flex;
      flex-direction: column;
@@ -27,19 +50,21 @@ body{
  }
  .stat-xp {
 
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: -20px;
-margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -8px;
+    margin-bottom: 28px;
  }
  .stats-column {
      display: flex;
      flex-direction: row;
      justify-content: space-between;
+     /* margin-left: -10px; */
  }
  .stat-tittle {
      font-weight: bold;
+     font-size: 1.2em;
     
  } 
 
@@ -53,20 +78,12 @@ margin-bottom: 30px;
  }
  
  .xp{
-     font-size: 25px;
+     font-size: 35px;
      font-weight: bold;
  }
 
 
  
-.app {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
 
 .content{
     display: flex;
@@ -79,7 +96,6 @@ margin-bottom: 30px;
     color: #fff;
 }
 .container{
- 
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -89,28 +105,61 @@ margin-bottom: 30px;
     position: relative;
     cursor: pointer;
     margin: 0 9px;
+  
+    
 }
 
 .container .card .face{
     width: 300px;
     height: 200px;
     transition: 0.5s;
+   
 }
 
 .container .card .face.face1{
     position: relative;
-    background: #333;
+    background-color: #0084ff;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
     transform: translateY(100px);
-    border-radius: 10px;
+    border-radius: 10px; 
+}
+.container .card:hover .face.face1 .num{
+    color: #fff;
+}
+.face1-img{
+    width: 10%;
+    left:10px;
+    margin-top:-150px;
+    position: absolute;
+   
+    z-index: 0;
+    display:none;
+    transition: 1s;
+    
+
+}
+
+.name-poke{
+    z-index: 4;
+}
+.img-poke {
+z-index: 5;
 }
 
 .container .card:hover .face.face1{
     transform: translateY(0);
     border-radius: 10px 10px 0 0;
+    
+    
+}
+.container .card:hover .face.face1 .face1-img{
+    display: block;
+    opacity: .5;
+    
+    
 }
 
 .container .card .face.face1 .content{
@@ -158,58 +207,139 @@ margin-bottom: 30px;
     margin: 0;
     padding: 0;
 }
+/* color face1 */
 .card .face.face1.type-fire {
-    
-    background: rgb(236, 80, 7);
+    background-color: rgb(236, 80, 7);
 }
  .card .face.face1.type-electric {
-    background: orange;
+    background-color: rgb(255, 165, 0);
 }
 .card .face.face1.type-bug {
-    background: rgb(8, 180, 22);
+    background-color: rgb(8, 180, 22);
 }
 .card .face.face1.type-water {
-    background: rgb(8, 119, 223);
+    background-color: rgb(8, 119, 223);
      
 }
+.card .face.face1.type-ghost{
+    background-color: rgb(43, 29, 40);
+}
 .card .face.face1.type-grass {
-    background: rgb(5, 104, 13);
+    background-color: rgb(5, 104, 13);
 }
 .card .face.face1.type-normal {
-    background: rgb(45, 48, 47);
+    background-color: rgb(45, 48, 47);
 }
 .card .face.face1.type-poison {
-    background: rgb(49, 11, 66);
+    background-color: rgb(107, 31, 143);
 }
 
 .card .face.face1.type-ground{
-    background: rgb(53, 46, 18);
+    background-color: rgb(56,29,15);
 }
 .card .face.face1.type-fairy{
-    background: rgb(202, 15, 171);
+    background-color: rgb(202, 15, 171);
 }
 .card .face.face1.type-fighting{
-    background: rgb(202, 121, 15);
+    background-color: rgba(202, 158, 15,1);
+
 }
 .card .face.face1.type-psychic{
-    background: rgb(221, 236, 7);
+    background-color: rgb(169, 180, 5);
 }
 .card .face.face1.type-dragon{
-    background: #ff0000;
+    background-color: rgb(236, 7, 7);
 }
 .card .face.face1.type-ice{
-    background: rgb(4, 102, 214);
+    background-color: rgb(4, 102, 214);
 }
 
 .card .face.face1.type-steel{
-    background: rgb(100, 119, 139);
+    background-color: rgb(100, 119, 139);
 }
 .card .face.face1.type-rock{
-    background: rgb(65, 76, 88);
+    background-color: rgb(65, 76, 88);
 }
 .card .face.face1.type-dark{
-    background: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
 }
 .card .face.face1.type-flying{
-    background: rgb(101, 139, 209);
+    background-color: rgb(101, 139, 209);
 }
+/* end color face1 */
+
+/* color face2 */
+.card .face.face2.type-fire {
+    background-color: rgba(236, 80, 7,.5);
+    color: white;
+}
+ .card .face.face2.type-electric {
+    background-color: rgba(255, 165, 0,.5);
+    color: white;
+}
+.card .face.face2.type-bug {
+    background-color: rgba(8, 180, 22,.5);
+    color: white;
+}
+.card .face.face2.type-water {
+    background-color: rgba(8, 119, 223,.5);
+    color: white;
+}
+.card .face.face2.type-ghost{
+    background-color: rgba(43, 29, 40,.5);
+    color: white;
+}
+.card .face.face2.type-grass {
+    background-color: rgba(5, 104, 13,.5);
+    color: white;
+}
+.card .face.face2.type-normal {
+    background-color: rgba(45, 48, 47,.5);
+    color: white;
+}
+.card .face.face2.type-poison {
+    background-color: rgba(107, 31, 143,.5);
+    color: white;
+}
+.card .face.face2.type-ground{
+    background-color: rgba(56, 29, 15,.5);
+    color: white;
+}
+.card .face.face2.type-fairy{
+    background-color: rgba(202, 15, 171,.5);
+    color: white;
+}
+.card .face.face2.type-fighting{
+    background-color: rgba(202, 158, 15,1);
+    color: white;
+}
+.card .face.face2.type-psychic{
+    background-color: rgba(169, 180, 5,.5);
+    color: white;
+}
+.card .face.face2.type-dragon{
+    background-color: rgba(236, 7, 7,.5);
+    color: white;
+}
+.card .face.face2.type-ice{
+    background-color: rgba(4, 102, 214,.5);
+    color: white;
+}
+
+.card .face.face2.type-steel{
+    background-color: rgba(100, 119, 139,.5);
+    color: white;
+}
+.card .face.face2.type-rock{
+    background-color: rgba(65, 76, 88,.5);
+    color: white;
+}
+.card .face.face2.type-dark{
+    background-color: rgba(0, 0, 0,.5);
+    color: white;
+}
+.card .face.face2.type-flying{
+    background-color: rgba(101, 139, 209,.5);
+    color: white;
+}
+/* end color face */
