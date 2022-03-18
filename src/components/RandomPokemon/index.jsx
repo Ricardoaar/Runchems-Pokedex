@@ -11,7 +11,17 @@ const RandomPokemon = () => {
     setAnimating(true);
     setTimeout(() => {
       setAnimating(false);
-      const id = Math.floor(Math.random() * 1126) + 1;
+      let id;
+      do {
+        id = Math.floor(Math.random() * 1228) + 1;
+      } while (id > 900 && id <= 1000);
+
+      if (id > 1000) {
+        const lowerThan10 = id % 1000 < 10;
+        const lowerThan100 = id % 1000 < 100;
+
+        id = `10${lowerThan10 ? "00" : lowerThan100 ? "0" : ""}${id % 1000}`;
+      }
       setPokemon({ "url": `https://pokeapi.co/api/v2/pokemon/${id}/` });
     }, 1410);
   };

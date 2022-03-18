@@ -24,8 +24,8 @@ const Pokemon = ({ pokemon, setType = null }) => {
     <div className="container">
       <div className="card">
         <div className={`face face1 type-${pokemonData && pokemonData.types[0].type.name}`}>
-          <img src={pokemonImg} className="face1-img" alt="Pokemon"/>
-          <p className="num">#{pokemonData.id}</p>
+          <img src={pokemonImg} className="face1-img" alt={`Pokemon Image ${pokemonData.name}`}/>
+          <p className="num">#{pokemonData.id > 1000 ? (pokemonData.id - 9000) : pokemonData.id}</p>
           <div className="content">
             <img className="img-poke" src={pokeImg} alt="pokemon"/>
             <h3 className="name-poke">

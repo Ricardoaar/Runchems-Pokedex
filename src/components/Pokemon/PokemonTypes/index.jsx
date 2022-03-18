@@ -66,10 +66,8 @@ const translateType = (type) => {
 };
 const PokemonTypes = ({ types }) => {
   if (!types) return <></>;
-  console.log(types);
   const primaryType = translateType(types[0].type.name);
   const secondaryType = types[1] && translateType(types[1].type.name);
-  console.log(primaryType);
   return <div className="all-types">{secondaryType ?
     <>
       <p className="types-esp">{primaryType}</p>
